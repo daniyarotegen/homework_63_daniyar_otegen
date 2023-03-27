@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'instaclone'
+    'instaclone',
     'bootstrap5',
 ]
 
@@ -103,6 +103,12 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
+]
+
+AUTH_USER_MODEL = 'instaclone.CustomUser'
+AUTHENTICATION_BACKENDS = [
+    'instaclone.backends.EmailBackend',
+    'django.contrib.auth.backends.ModelBackend',
 ]
 
 
