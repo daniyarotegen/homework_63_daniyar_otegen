@@ -55,7 +55,10 @@ class HomeView(LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         followed_users = self.request.user.following.all()
-        return Post.objects.all().order_by('-created_at')
+        return Post.objects.filter(
+            Q(user=self.request.user) | Q(user__in=followed_users)
+        ).order_by('-created_at')
+
 
 
 class ProfileView(LoginRequiredMixin, TemplateView):
