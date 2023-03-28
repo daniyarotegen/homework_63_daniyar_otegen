@@ -4,17 +4,32 @@
 {% block content %}
 <div class="row">
     <div class="col-md-4">
-        {% if user.avatar %}
-        <img src="{{ user.avatar.url }}" class="img-fluid rounded-circle" alt="User Avatar">
+        {% if profile_user.avatar %}
+        <img src="{{ profile_user.avatar.url }}" class="img-fluid rounded-circle" alt="User Avatar">
         {% else %}
         <img src="{% static 'default-avatar.png' %}" class="img-fluid rounded-circle" alt="User Avatar">
         {% endif %}
     </div>
     <div class="col-md-8">
-        <h1>{{ user.username }}</h1>
-        <p>Email: {{ user.email }}</p>
-        <p>First Name: {{ user.first_name }}</p>
-        <p>Last Name: {{ user.last_name }}</p>
+        <h1>{{ profile_user.username }}</h1>
+        <p>Name: {{ profile_user.name }}</p>
+        <p>Email: {{ profile_user.email }}</p>
+        <p>User Info: {{ profile_user.user_info }}</p>
     </div>
 </div>
+
+{% if posts %}
+<h2>User Posts:</h2>
+<div class="row">
+    {% for post in posts %}
+    <div class="col-md-4">
+        <img src="{{ post.image.url }}" class="img-fluid" alt="{{ post.description }}">
+        <p>{{ post.description }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<h2>No posts found for this user.</h2>
+{% endif %}
 {% endblock %}
+

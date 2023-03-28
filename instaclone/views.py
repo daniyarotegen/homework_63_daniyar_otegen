@@ -1,7 +1,8 @@
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView
-from django.shortcuts import render
+from django.db.models import Q
+from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy, reverse
 from django.views import View
 from django.views.generic import ListView
@@ -56,5 +57,28 @@ class HomeView(LoginRequiredMixin, ListView):
 
 
 class ProfileView(LoginRequiredMixin, View):
-    def get(self, request):
-        return render(request, 'profile.html')
+    def get(self, request, user_id):
+        user = get_object_or_404(CustomUser, pk=user_id)
+        posts = Post.objects.filter(user=user).order_by('-created_at')
+        context = {
+            'profile_user': user,
+            'posts': posts,
+        }
+        return render(request, 'profile.html', context)
+
+
+
+class UserSearchView(LoginRequiredMixin, ListView):
+    model = CustomUser
+    template_name = 'user_search.html'
+    context_object_name = 'users'
+
+    def get_queryset(self):
+        query = self.request.GET.get('q', '')
+        if query:
+            return CustomUser.objects.filter(
+                Q(username__icontains=query) |
+                Q(email__icontains=query) |
+                Q(name__icontains=query)
+            )
+        return CustomUser.objects.none()
