@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+        {% if user.avatar %}
+        <img src="{{ user.avatar.url }}" class="img-fluid rounded-circle" alt="User Avatar">
+        {% else %}
+        <img src="{% static 'default-avatar.png' %}" class="img-fluid rounded-circle" alt="User Avatar">
+        {% endif %}
+    </div>
+    <div class="col-md-8">
+        <h1>{{ user.username }}</h1>
+        <p>Email: {{ user.email }}</p>
+        <p>First Name: {{ user.first_name }}</p>
+        <p>Last Name: {{ user.last_name }}</p>
+    </div>
+</div>
+{% endblock %}

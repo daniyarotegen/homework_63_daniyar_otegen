@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from .models import CustomUser
+from .models import CustomUser, Post
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -18,3 +18,14 @@ class CustomUserCreationForm(UserCreationForm):
             'phone_number': forms.TextInput(attrs={'class': 'form-control'}),
             'gender': forms.Select(choices=CustomUser.GENDER_CHOICES, attrs={'class': 'form-control'}),
             }
+
+
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ['image', 'description']
+        widgets = {
+            'image': forms.FileInput(attrs={'class': 'form-control'}),
+            'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
+        }
+
