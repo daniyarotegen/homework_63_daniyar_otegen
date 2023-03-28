@@ -1,7 +1,7 @@
 from django.contrib.auth.views import LogoutView
 from django.urls import path
 from .views import RegisterView, UserLoginView, PostCreateView, ProfileView, UserSearchView, FollowUserView, \
-    UnfollowUserView, LikePostView, CommentCreateView
+    UnfollowUserView, LikePostView, CommentCreateView, FollowersListView, FollowingListView
 
 urlpatterns = [
     path('register/', RegisterView.as_view(), name='register'),
@@ -15,4 +15,7 @@ urlpatterns = [
     path('unfollow/<int:pk>/', UnfollowUserView.as_view(), name='unfollow_user'),
     path('like/<int:pk>/', LikePostView.as_view(), name='like_post'),
     path('comment/<int:pk>/', CommentCreateView.as_view(), name='comment_create'),
+    path('profile/<int:user_id>/followers/', FollowersListView.as_view(), name='followers_list'),
+    path('profile/<int:user_id>/following/', FollowingListView.as_view(), name='following_list'),
+
 ]

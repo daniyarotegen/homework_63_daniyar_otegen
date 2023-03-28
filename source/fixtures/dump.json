@@ -404,6 +404,14 @@
   }
 },
 {
+  "model": "sessions.session",
+  "pk": "nin8oxvd6xkgbssd07uvpcoozm6tnk94",
+  "fields": {
+    "session_data": ".eJxVjDsOwyAQBe9CHSFYm1_K9D4DAnYJTiKQjF1FuXtsyUXSvpl5b-bDtha_dVr8jOzKgF1-txjSk-oB8BHqvfHU6rrMkR8KP2nnU0N63U7376CEXvY6x-AoKTmQBABrEHAUctBOgkRFGpFID2a0CrIQ2uweWklWZ4yJHLLPF9gHN9c:1ph8mv:WImddn53cEyJC79zieDUowyGucip2T0tugmv_g0bmb0",
+    "expire_date": "2023-04-11T12:50:57.821Z"
+  }
+},
+{
   "model": "instaclone.customuser",
   "pk": 1,
   "fields": {
@@ -423,7 +431,7 @@
     "phone_number": null,
     "gender": null,
     "posts_count": 0,
-    "followers_count": 0,
+    "followers_count": 1,
     "groups": [],
     "user_permissions": [],
     "following": []
@@ -434,7 +442,7 @@
   "pk": 2,
   "fields": {
     "password": "pbkdf2_sha256$390000$psgYShY8GwhY6q74Y67n9B$fccS05S/Yi+oxvC7HexQWzk2uGFP+2XA1rN58icHtSE=",
-    "last_login": "2023-03-28T07:20:08.752Z",
+    "last_login": "2023-03-28T12:50:57.820Z",
     "is_superuser": false,
     "username": "john",
     "first_name": "",
@@ -460,7 +468,7 @@
   "pk": 3,
   "fields": {
     "password": "pbkdf2_sha256$390000$KOtIkNWN62eZKzF1m7vCZ2$iAmliEkNQCnnT8KZL8zEgb849wRiuhJ2O3/BI11G2qM=",
-    "last_login": "2023-03-28T07:20:22.644Z",
+    "last_login": "2023-03-28T11:10:11.219Z",
     "is_superuser": false,
     "username": "daniyar1991",
     "first_name": "",
@@ -475,11 +483,12 @@
     "phone_number": null,
     "gender": "male",
     "posts_count": 0,
-    "followers_count": 6,
+    "followers_count": 7,
     "groups": [],
     "user_permissions": [],
     "following": [
-      2
+      2,
+      1
     ]
   }
 },
@@ -503,7 +512,7 @@
     "image": "posts/cat_ptk1bd2.png",
     "description": "My cat",
     "created_at": "2023-03-27T22:11:01.501Z",
-    "likes_count": 1,
+    "likes_count": 0,
     "comments_count": 0
   }
 },
@@ -515,8 +524,8 @@
     "image": "posts/sleeping.png",
     "description": "my catski",
     "created_at": "2023-03-27T22:11:18.011Z",
-    "likes_count": 1,
-    "comments_count": 0
+    "likes_count": 0,
+    "comments_count": 1
   }
 },
 {
@@ -527,8 +536,8 @@
     "image": "posts/happy.png",
     "description": "dasd",
     "created_at": "2023-03-28T05:25:55.560Z",
-    "likes_count": 1,
-    "comments_count": 0
+    "likes_count": 0,
+    "comments_count": 3
   }
 },
 {
@@ -539,44 +548,47 @@
     "image": "posts/sad.png",
     "description": "sad",
     "created_at": "2023-03-28T05:43:42.056Z",
+    "likes_count": 2,
+    "comments_count": 11
+  }
+},
+{
+  "model": "instaclone.post",
+  "pk": 6,
+  "fields": {
+    "user": 3,
+    "image": "posts/51036-cwobnirfka-1580816618.jpeg",
+    "description": "my cat",
+    "created_at": "2023-03-28T12:11:06.312Z",
     "likes_count": 1,
-    "comments_count": 7
+    "comments_count": 1
   }
 },
 {
   "model": "instaclone.like",
-  "pk": 12,
-  "fields": {
-    "user": 3,
-    "post": 4,
-    "created_at": "2023-03-28T09:27:11.782Z"
-  }
-},
-{
-  "model": "instaclone.like",
-  "pk": 13,
-  "fields": {
-    "user": 3,
-    "post": 2,
-    "created_at": "2023-03-28T09:27:18.000Z"
-  }
-},
-{
-  "model": "instaclone.like",
-  "pk": 14,
-  "fields": {
-    "user": 3,
-    "post": 3,
-    "created_at": "2023-03-28T09:27:28.035Z"
-  }
-},
-{
-  "model": "instaclone.like",
-  "pk": 15,
+  "pk": 20,
   "fields": {
     "user": 3,
     "post": 5,
-    "created_at": "2023-03-28T09:29:51.621Z"
+    "created_at": "2023-03-28T11:43:01.659Z"
+  }
+},
+{
+  "model": "instaclone.like",
+  "pk": 22,
+  "fields": {
+    "user": 2,
+    "post": 6,
+    "created_at": "2023-03-28T12:56:31.057Z"
+  }
+},
+{
+  "model": "instaclone.like",
+  "pk": 23,
+  "fields": {
+    "user": 2,
+    "post": 5,
+    "created_at": "2023-03-28T12:56:35.414Z"
   }
 },
 {
@@ -647,6 +659,96 @@
     "post": 5,
     "text": "hehe",
     "created_at": "2023-03-28T09:27:58.457Z"
+  }
+},
+{
+  "model": "instaclone.comment",
+  "pk": 8,
+  "fields": {
+    "user": 3,
+    "post": 5,
+    "text": "fsdf",
+    "created_at": "2023-03-28T11:10:27.105Z"
+  }
+},
+{
+  "model": "instaclone.comment",
+  "pk": 9,
+  "fields": {
+    "user": 3,
+    "post": 4,
+    "text": "hello",
+    "created_at": "2023-03-28T11:25:55.266Z"
+  }
+},
+{
+  "model": "instaclone.comment",
+  "pk": 10,
+  "fields": {
+    "user": 3,
+    "post": 3,
+    "text": "hi",
+    "created_at": "2023-03-28T11:28:21.106Z"
+  }
+},
+{
+  "model": "instaclone.comment",
+  "pk": 11,
+  "fields": {
+    "user": 3,
+    "post": 5,
+    "text": "oih",
+    "created_at": "2023-03-28T11:28:44.095Z"
+  }
+},
+{
+  "model": "instaclone.comment",
+  "pk": 12,
+  "fields": {
+    "user": 3,
+    "post": 4,
+    "text": "hi",
+    "created_at": "2023-03-28T11:29:18.759Z"
+  }
+},
+{
+  "model": "instaclone.comment",
+  "pk": 13,
+  "fields": {
+    "user": 3,
+    "post": 5,
+    "text": "asdas",
+    "created_at": "2023-03-28T11:40:44.715Z"
+  }
+},
+{
+  "model": "instaclone.comment",
+  "pk": 14,
+  "fields": {
+    "user": 3,
+    "post": 5,
+    "text": "asd",
+    "created_at": "2023-03-28T11:41:14.557Z"
+  }
+},
+{
+  "model": "instaclone.comment",
+  "pk": 15,
+  "fields": {
+    "user": 3,
+    "post": 4,
+    "text": "asda",
+    "created_at": "2023-03-28T12:50:37.937Z"
+  }
+},
+{
+  "model": "instaclone.comment",
+  "pk": 16,
+  "fields": {
+    "user": 3,
+    "post": 6,
+    "text": "qweq",
+    "created_at": "2023-03-28T12:50:49.692Z"
   }
 }
 ]

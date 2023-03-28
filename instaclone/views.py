@@ -3,7 +3,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView
 from django.db.models import Q
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy, reverse
 from django.views import View
 from django.views.generic import ListView, RedirectView, TemplateView
@@ -55,17 +55,35 @@ class HomeView(LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         followed_users = self.request.user.following.all()
-        return Post.objects.filter(user__in=followed_users).order_by('-created_at')
+        return Post.objects.all().order_by('-created_at')
 
 
 class ProfileView(LoginRequiredMixin, TemplateView):
     template_name = 'profile.html'
 
-    def get(self, request, *args, **kwargs):
-        user_id = kwargs.get('user_id', request.user.id)
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        user_id = kwargs.get('user_id', self.request.user.id)
         profile_user = get_object_or_404(CustomUser, pk=user_id)
         posts = Post.objects.filter(user=profile_user).order_by('-created_at')
-        return self.render_to_response({'profile_user': profile_user, 'posts': posts})
+
+        is_own_profile = self.request.user == profile_user
+        is_following = self.request.user.following.filter(pk=profile_user.pk).exists()
+        posts_count = profile_user.post_set.count()
+        followers_count = profile_user.followers.count()
+        following_count = profile_user.following.count()
+
+        context.update({
+            'profile_user': profile_user,
+            'posts': posts,
+            'is_own_profile': is_own_profile,
+            'is_following': is_following,
+            'posts_count': posts_count,
+            'followers_count': followers_count,
+            'following_count': following_count,
+        })
+
+        return context
 
 
 class UserSearchView(LoginRequiredMixin, ListView):
@@ -139,3 +157,23 @@ class CommentCreateView(LoginRequiredMixin, CreateView):
         return self.request.META.get('HTTP_REFERER', '/')
 
 
+class FollowersListView(LoginRequiredMixin, ListView):
+    model = CustomUser
+    template_name = 'followers_list.html'
+    context_object_name = 'users'
+
+    def get_queryset(self):
+        user_id = self.kwargs['user_id']
+        profile_user = get_object_or_404(CustomUser, pk=user_id)
+        return profile_user.followers.all()
+
+
+class FollowingListView(LoginRequiredMixin, ListView):
+    model = CustomUser
+    template_name = 'following_list.html'
+    context_object_name = 'users'
+
+    def get_queryset(self):
+        user_id = self.kwargs['user_id']
+        profile_user = get_object_or_404(CustomUser, pk=user_id)
+        return profile_user.following.all()
