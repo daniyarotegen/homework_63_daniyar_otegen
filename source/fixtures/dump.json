@@ -1,0 +1,652 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 6,
+    "codename": "add_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 6,
+    "codename": "change_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 6,
+    "codename": "delete_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 6,
+    "codename": "view_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add post",
+    "content_type": 7,
+    "codename": "add_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change post",
+    "content_type": 7,
+    "codename": "change_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete post",
+    "content_type": 7,
+    "codename": "delete_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view post",
+    "content_type": 7,
+    "codename": "view_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add like",
+    "content_type": 8,
+    "codename": "add_like"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change like",
+    "content_type": 8,
+    "codename": "change_like"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete like",
+    "content_type": 8,
+    "codename": "delete_like"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view like",
+    "content_type": 8,
+    "codename": "view_like"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add comment",
+    "content_type": 9,
+    "codename": "add_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change comment",
+    "content_type": 9,
+    "codename": "change_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete comment",
+    "content_type": 9,
+    "codename": "delete_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view comment",
+    "content_type": 9,
+    "codename": "view_comment"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "instaclone",
+    "model": "customuser"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "instaclone",
+    "model": "post"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "instaclone",
+    "model": "like"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "instaclone",
+    "model": "comment"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "mey02fpcsuy8awsi7rwog42vw78o43g2",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSG8BqhL934DGRiQqoGktCvjv2uTLnR7zzn3xQJuaw3byEuYiZ2ZZqffLWJ65LYDumO7dZ56W5c58l3hBx382ik_L4f7d1Bx1G_tLQhNmCMRGaOKF2CTcdoLOxntVEnFxyw9gJhQOVlKdBaStCJJZSOw9wfXDjdK:1ph3d0:LN-sAhSJyJkLHMYXAghDtHAMnQf1GfD4ejnqBisr7JQ",
+    "expire_date": "2023-04-11T07:20:22.646Z"
+  }
+},
+{
+  "model": "instaclone.customuser",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$899oW08s5EzrVNr1lqUgE1$wvTc2hzMqVHyPGg785pIzmrpqEhJr3gk74MCEjHf7Cw=",
+    "last_login": "2023-03-27T21:13:45.281Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-03-27T20:45:51.788Z",
+    "email": "",
+    "avatar": "",
+    "name": "",
+    "user_info": null,
+    "phone_number": null,
+    "gender": null,
+    "posts_count": 0,
+    "followers_count": 0,
+    "groups": [],
+    "user_permissions": [],
+    "following": []
+  }
+},
+{
+  "model": "instaclone.customuser",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$psgYShY8GwhY6q74Y67n9B$fccS05S/Yi+oxvC7HexQWzk2uGFP+2XA1rN58icHtSE=",
+    "last_login": "2023-03-28T07:20:08.752Z",
+    "is_superuser": false,
+    "username": "john",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-03-27T22:10:35.765Z",
+    "email": "john@email.com",
+    "avatar": "avatars/happy.png",
+    "name": "john",
+    "user_info": "",
+    "phone_number": null,
+    "gender": "male",
+    "posts_count": 0,
+    "followers_count": 6,
+    "groups": [],
+    "user_permissions": [],
+    "following": []
+  }
+},
+{
+  "model": "instaclone.customuser",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$KOtIkNWN62eZKzF1m7vCZ2$iAmliEkNQCnnT8KZL8zEgb849wRiuhJ2O3/BI11G2qM=",
+    "last_login": "2023-03-28T07:20:22.644Z",
+    "is_superuser": false,
+    "username": "daniyar1991",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-03-28T06:18:10.686Z",
+    "email": "daniyar1991@mail.ru",
+    "avatar": "avatars/angry.png",
+    "name": "daniyar",
+    "user_info": "",
+    "phone_number": null,
+    "gender": "male",
+    "posts_count": 0,
+    "followers_count": 6,
+    "groups": [],
+    "user_permissions": [],
+    "following": [
+      2
+    ]
+  }
+},
+{
+  "model": "instaclone.post",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "image": "posts/cat.png",
+    "description": "catski",
+    "created_at": "2023-03-27T21:14:05.293Z",
+    "likes_count": 0,
+    "comments_count": 0
+  }
+},
+{
+  "model": "instaclone.post",
+  "pk": 2,
+  "fields": {
+    "user": 2,
+    "image": "posts/cat_ptk1bd2.png",
+    "description": "My cat",
+    "created_at": "2023-03-27T22:11:01.501Z",
+    "likes_count": 1,
+    "comments_count": 0
+  }
+},
+{
+  "model": "instaclone.post",
+  "pk": 3,
+  "fields": {
+    "user": 2,
+    "image": "posts/sleeping.png",
+    "description": "my catski",
+    "created_at": "2023-03-27T22:11:18.011Z",
+    "likes_count": 1,
+    "comments_count": 0
+  }
+},
+{
+  "model": "instaclone.post",
+  "pk": 4,
+  "fields": {
+    "user": 2,
+    "image": "posts/happy.png",
+    "description": "dasd",
+    "created_at": "2023-03-28T05:25:55.560Z",
+    "likes_count": 1,
+    "comments_count": 0
+  }
+},
+{
+  "model": "instaclone.post",
+  "pk": 5,
+  "fields": {
+    "user": 2,
+    "image": "posts/sad.png",
+    "description": "sad",
+    "created_at": "2023-03-28T05:43:42.056Z",
+    "likes_count": 1,
+    "comments_count": 7
+  }
+},
+{
+  "model": "instaclone.like",
+  "pk": 12,
+  "fields": {
+    "user": 3,
+    "post": 4,
+    "created_at": "2023-03-28T09:27:11.782Z"
+  }
+},
+{
+  "model": "instaclone.like",
+  "pk": 13,
+  "fields": {
+    "user": 3,
+    "post": 2,
+    "created_at": "2023-03-28T09:27:18.000Z"
+  }
+},
+{
+  "model": "instaclone.like",
+  "pk": 14,
+  "fields": {
+    "user": 3,
+    "post": 3,
+    "created_at": "2023-03-28T09:27:28.035Z"
+  }
+},
+{
+  "model": "instaclone.like",
+  "pk": 15,
+  "fields": {
+    "user": 3,
+    "post": 5,
+    "created_at": "2023-03-28T09:29:51.621Z"
+  }
+},
+{
+  "model": "instaclone.comment",
+  "pk": 1,
+  "fields": {
+    "user": 3,
+    "post": 5,
+    "text": "hello",
+    "created_at": "2023-03-28T08:52:11.745Z"
+  }
+},
+{
+  "model": "instaclone.comment",
+  "pk": 2,
+  "fields": {
+    "user": 3,
+    "post": 5,
+    "text": "hi",
+    "created_at": "2023-03-28T08:53:40.170Z"
+  }
+},
+{
+  "model": "instaclone.comment",
+  "pk": 3,
+  "fields": {
+    "user": 3,
+    "post": 5,
+    "text": "hi",
+    "created_at": "2023-03-28T08:54:08.246Z"
+  }
+},
+{
+  "model": "instaclone.comment",
+  "pk": 4,
+  "fields": {
+    "user": 3,
+    "post": 5,
+    "text": "ad",
+    "created_at": "2023-03-28T08:55:31.436Z"
+  }
+},
+{
+  "model": "instaclone.comment",
+  "pk": 5,
+  "fields": {
+    "user": 3,
+    "post": 5,
+    "text": "ad",
+    "created_at": "2023-03-28T08:57:56.202Z"
+  }
+},
+{
+  "model": "instaclone.comment",
+  "pk": 6,
+  "fields": {
+    "user": 3,
+    "post": 5,
+    "text": "hee",
+    "created_at": "2023-03-28T08:57:59.784Z"
+  }
+},
+{
+  "model": "instaclone.comment",
+  "pk": 7,
+  "fields": {
+    "user": 3,
+    "post": 5,
+    "text": "hehe",
+    "created_at": "2023-03-28T09:27:58.457Z"
+  }
+}
+]
